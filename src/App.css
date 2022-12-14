@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+}
+
+.app{
+  background-color: #fafafa;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app__header{
+  width: 100vw;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+.app__header_content{
+  width: 70%;
+  padding: 20px;
+  object-fit: contain;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__header__icon{
+  padding: 0 8px;
+}

@@ -44,22 +44,33 @@ function App() {
   const stories = [
     {
       id: "story1",
-      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png"
+      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png",
+      username: 'Emma Watson'
     },{
       id: "story2",
-      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png"
+      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png",
+      username: 'Emma Watson'
+
     },{
       id: "story3",
-      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png"
+      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png",
+      username: 'Emma Watson'
+
     },{
       id: "story4",
-      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png"
+      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png",
+      username: 'Emma Watson'
+
     },{
       id: "story5",
-      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png"
+      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png",
+      username: 'Emma Watson'
+
     },{
       id: "story6",
-      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png"
+      storyUrl: "https://www.himalmag.com/wp-content/uploads/2019/07/sample-profile-picture.png",
+      username: 'Emma Watson'
+
     },
   ]
 
@@ -84,8 +95,17 @@ function App() {
           </div>
         </div>
       </div>
-      {stories.map(story=><Story key={story.id} storyUrl={story.storyUrl}/>)}
-      {posts.map(post=><Post username={post.username} caption={post.caption} imageUrl={post.imageUrl} key={post.id}/>)}
+      <div className='app__body'>
+        <div className='app__body__posts'>
+          <div className='app__stories__section'>
+            {stories.map(story=><Story key={story.id} storyUrl={story.storyUrl} username={story.username} />)}
+          </div>
+          {posts.map(post=><Post username={post.username} caption={post.caption} imageUrl={post.imageUrl} key={post.id}/>)}
+        </div>
+        <div className='app__body__suggestions'>
+          Suggestions
+        </div>
+      </div>
     </div>
   );
 }
